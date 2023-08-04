@@ -1,23 +1,24 @@
-﻿string [] array1 = new string[5] { "hello", "342", "sum", "5778", "world" };
-string [] array2 = new string[array1.Length];
+﻿﻿string[] array1 = new string[5] {"453", "add", "hello", "world", "34"};
+string[] array2 = new string[array1.Length];
 void Method4(string[] array1, string[] array2)
 {
     int count = 0;
-    for (int i = 0; i < array1.Length; i++);
+    for (int i = 0; i < array1.Length; i++)
     {
-        if (array1[i].Length <= 3)
+    if(array1[i].Length <= 3)
         {
-            return;
-        }
         array2[count] = array1[i];
         count++;
+        }
     }
 }
 void PrintArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($"{array[i]}");
+        Console.Write($"{array[i]} ");
     }
     Console.WriteLine();
 }
+Method4(array1, array2);
+PrintArray(array2);
